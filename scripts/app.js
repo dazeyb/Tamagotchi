@@ -35,17 +35,26 @@ if X time passes and age = X, and monster health != 0, enter stage 2
 Stage 2: 
 
 Monster transforms. Changes image.
+    Jquery DOM manipulation on DIV with the egg photo 
+    
 
 New, smaller bar appears showing health at full.
 
-New bar appears showing boredom.
+    Append 3 sections into topBar section
+    Have them be styled by class, defined in CSS
 
-New bar appears showing Sleepiness
+        New bar appears showing boredom.
+        New bar appears showing Sleepiness
 
 3 new buttons for nuke, playing, lights out
+-Can reuse nuke button, squish into same section as playing and lights out
+    Lights out button reverses light 
+
 
 New timer for age (necessary?), keeping old values
 
+
+? Can I utilize one timer for all?
 Timer for health
 timer for Sleepiness
 timer for boredom       
@@ -57,14 +66,16 @@ console log "Died of hunger, or sleeping, or boredom, if any bars <=0 "
 Stage 3: 
 
 if health sleepiness boredom != 0, & age = X
+    attached to age timer method/function
 
 TRANSFORM to Mechagodzilla
+
 
 Timer for health
 timer for Sleepiness
 timer for boredom   
 
-age timer
+age timer continues
 
 
 
