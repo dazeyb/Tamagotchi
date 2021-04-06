@@ -18,26 +18,25 @@ body {
     z-index: 10;
 } */
 
-.mainBody {
+.main-body {
     background-color: aquamarine;
+    height: 700px;
+    width: 450px;
+    border-radius: 14px 14px 110px 14px;
+    /* position: relative; */
+    /* display: flex; */
+    border: 7px outset crimson;
+    padding: 20px;
 }
 
 
 .gamepad-grid {
-    height: 700px;
-    width: 450px;
-    /* border-radius: 50px; */
-    /* position: relative; */
-    /* display: flex; */
-    border: 10px solid crimson;
-    padding: 20px;
-
+  
 }
 
 i {
-
     font-size: 40px;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 /* img {
@@ -48,3 +47,14 @@ i {
     position: relative; 
 } */
 
+.screen {
+    position: absolute;
+    background-color: rgb(218, 218, 218);
+    height: 300px;
+    width: 385px;
+    border-radius: 5px;
+    /* display: flex; */
+    border: 3px solid rgb(100, 7, 251);
+    padding: 20px;
+
+}
