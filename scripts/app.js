@@ -7,7 +7,7 @@ const removeNamingBox = function removeNamingBox(){
 };
 
 // I need to add a method that includes removeNamingBox, and all the other functions
-$(".submitButton").on("click", removeNamingBox);
+// $(".submitButton").on("click", removeNamingBox);
 
 
 
