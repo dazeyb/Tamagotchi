@@ -2,12 +2,12 @@
 
 // This removes everything in the beginning, and will eventually add all the new elements
 const removeNamingBox = function removeNamingBox(){
-    $(".preGame").remove();
+    $(".pre-game").remove();
     console.log("testing");
 };
 
 // I need to add a method that includes removeNamingBox, and all the other functions
-// $(".submitButton").on("click", removeNamingBox);
+ $(".submitButton").on("click", removeNamingBox);
 
 
 
