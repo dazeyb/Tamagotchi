@@ -2,27 +2,33 @@ User story:
 
 Stage 1: 
 
-
 Player will see cell-phone shaped box that is styled.
+    HTML labeled section in body
+    Styled in CSS
+    Rounded edges
 
 Player will click a button on the screen and entering name, and the game will begin. 
-
-Name of monster will === entered name, shown somewhere.
-
+    Button in HTML with a textbox
+    Event listener on click, returns a value/creates div with class as name, and text as name
+    
 An egg will appear on the screen, one life bar, one button for radiation.
-
-Age will appear, starting at 0.
+Changes opacity of egg to 100% on click
+Creates life bar, or changes opacity and begins countdown
+and life bar
+Creates age class, value 0
 
 A timer will start for age, and one will start for health bar.
+Hmmmm
 
-Health bar will decrease over time.
-
+Health bar will decrease over time (bars sliding left? JQuery effects)
 If health bar = 0, end game and say "Name has died"
+    variable that keeps count 
 
-Clicking radiation button will increase health.
 
-if X time passes and age = X, and mmonster health != 0, enter stage 2
+Clicking nuke button will increase health value
+    onclick (only available after game start)
 
+if X time passes and age = X, and monster health != 0, enter stage 2
 
 
 
@@ -38,7 +44,6 @@ New bar appears showing Sleepiness
 
 3 new buttons for nuke, playing, lights out
 
-
 New timer for age (necessary?), keeping old values
 
 Timer for health
@@ -46,6 +51,7 @@ timer for Sleepiness
 timer for boredom       
 
 console log "Died of hunger, or sleeping, or boredom, if any bars <=0 "
+
 
 
 Stage 3: 
