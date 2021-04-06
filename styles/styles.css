@@ -1,4 +1,8 @@
 /* Css background property */
+body {
+    background-color: darkslategray;
+}
+
 
 .nameBoxRectangle {
     padding: 60px;
@@ -12,5 +16,13 @@
  /* Specify this with a class later */
 h2 {
     z-index: 10;
+}
 
+.mainBody {
+    background-color: aquamarine;
+
+
+}
+.gamepad {
+    display: grid;
 }

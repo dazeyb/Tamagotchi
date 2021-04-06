@@ -1,8 +1,16 @@
-$(".submitButton").on("click", function(){
+
+
+// This removes everything in the beginning, and will eventually add all the new elements
+const removeNamingBox = function removeNamingBox(){
+    $(".preGame").remove();
     console.log("testing");
-});
+};
+
+// I need to add a method that includes removeNamingBox, and all the other functions
+$(".submitButton").on("click", removeNamingBox);
 
 
+const $
 
 
 
@@ -54,7 +62,7 @@ $(".submitButton").on("click", function(){
 //         New bar appears showing boredom.
 //         New bar appears showing Sleepiness
 
-// 3 new buttons for nuke, playing, lights out
+// 3 new buttons for nuke, playing, lights out (https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
 // -Can reuse nuke button, squish into same section as playing and lights out
 //     Lights out button reverses light 
 
