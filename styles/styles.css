@@ -1,9 +1,16 @@
 /* Css background property */
 
-#nameBoxRectangle {
+.nameBoxRectangle {
     padding: 60px;
     margin: 20px 20px;
-    width:800px;
-    height:300px;
+    width:1000px;
+    height:400px;
     background:rgb(198, 250, 101);
+    /* display: flex; */
+}
+
+ /* Specify this with a class later */
+h2 {
+    z-index: 10;
+
 }

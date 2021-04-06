@@ -1,3 +1,9 @@
+$(".submitButton").on("click", function(){
+    console.log("testing");
+});
+
+
+
 
 
 // User story:
