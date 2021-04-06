@@ -10,7 +10,6 @@ const removeNamingBox = function removeNamingBox(){
 $(".submitButton").on("click", removeNamingBox);
 
 
-const $
 
 
 
