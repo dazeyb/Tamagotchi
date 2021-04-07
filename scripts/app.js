@@ -25,15 +25,18 @@ let hearts = 5;
      if(hearts <= 5 && hearts > 1){
 
         hearts --;
+        $(".fa-heart").eq(0).remove();
         console.log(hearts);
         console.log("-1 heart");
-     } else if(hearts == 1){
+     
+    } else if(hearts == 1){
+        $(".fa-heart").eq(0).remove();
         hearts --;
         console.log(hearts);
         console.log("You're dead mate");
         return;
      }
-     clearInterval(healthTimer);
+    //  clearInterval(healthTimer);
  }
 
  const timerID = setInterval(healthTimer, 1000);
