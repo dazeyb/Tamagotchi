@@ -10,9 +10,6 @@ const removeNamingBox = function removeNamingBox(){
  $(".submitButton").on("click", removeNamingBox);
 
 
-
-
-
 // User story:
 
 // Stage 1: 

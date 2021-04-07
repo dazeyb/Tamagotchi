@@ -37,11 +37,11 @@ body {
 
 }
 
-i {
+/* i {
     font-size: 40px;
     color: rgb(0, 0, 0);
     z-index: 11;
-}
+} */
 
 /* img {
     max-width: 100%;
@@ -62,5 +62,15 @@ i {
     /* display: flex; */
     border: 3px solid rgb(100, 7, 251);
     padding: 20px;
+}
 
+.healthbar {
+    font-size: 27px;
+    color: red;
+}
+
+.monster-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
