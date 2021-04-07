@@ -19,9 +19,26 @@ const beginGame = function beginGame(){
  $(".submitButton").on("click", beginGame);
 
 
+let hearts = 5;
 
+ function healthTimer(thing){
+     if(hearts <= 5 && hearts > 1){
 
+        hearts --;
+        console.log(hearts);
+        console.log("-1 heart");
+     } else if(hearts == 1){
+        hearts --;
+        console.log(hearts);
+        console.log("You're dead mate");
+        return;
+     }
+     clearInterval(healthTimer);
+ }
 
+ const timerID = setInterval(healthTimer, 1000);
+
+ healthTimer(timerID);
 
 
 
@@ -29,9 +46,6 @@ const beginGame = function beginGame(){
 
 
 // Stage 1: 
-
-
-
 
 
 // Player will click a button on the screen and entering name, and the game will begin. 
