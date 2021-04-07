@@ -1,9 +1,10 @@
-/* Css background property */
+/*
 body {
-    background-color: darkslategray;
+    background-color: rgb(182, 181, 179);
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 
@@ -12,30 +13,50 @@ body {
     margin: 20px 20px;
     width:400px;
     height:150px;
-    background:rgb(198, 250, 101);
-    /* display: flex; */
+    background:rgb(88, 90, 84);
+    position: absolute;
+    z-index: 10;
+    border-radius: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
+
+.name-box-content {
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    text-align: center;
+}
+
+h2 {
+    color:rgb(182, 181, 179);
+}
+
 
  /* Specify this with a class later */
 /* h2 {
     z-index: 10;
 } */
 
+
+/*
 .main-body {
-    background-color: aquamarine;
+    background-color: #197287;
     height: 700px;
     width: 450px;
     border-radius: 14px 14px 110px 14px;
-    /* position: relative; */
-    /* display: flex; */
-    border: 7px outset crimson;
+    border: 7px outset #283d3b;
     padding: 20px;
+    display: flex;
+    z-index: 0;
 }
 
 
 .gamepad-grid {
-
+    z-index: 1;
 }
+
 
 /* i {
     font-size: 40px;
@@ -51,26 +72,45 @@ body {
     position: relative; 
 } */
 
+/*
 .screen {
     position: absolute;
     max-width: 100%;
     max-height: 100%;
-    background-color: rgb(218, 218, 218);
+    background-color: #edddd4;
     height: 300px;
     width: 385px;
     border-radius: 5px;
-    /* display: flex; */
-    border: 3px solid rgb(100, 7, 251);
-    padding: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 27px;
+    z-index: 3;
 }
 
 .healthbar {
+    
     font-size: 27px;
-    color: red;
+    color: #c44536;
 }
 
-.monster-img {
+.div-monster-img {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+    max-height: 100%;
 }
+
+.monster-img {
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#testing {
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 20px;
+}
+
+*/

@@ -1,23 +1,38 @@
-
-
 // This removes everything in the beginning, and will eventually add all the new elements
 const removeNamingBox = function removeNamingBox(){
     $(".pre-game").remove();
     console.log("testing");
 };
 
-// I need to add a method that includes removeNamingBox, and all the other functions
- $(".submitButton").on("click", removeNamingBox);
+// This prints the inputted name into a place for the monsters name
+const $logName = function $logName() {
+    $(".monster-name").text($(".grab-monster-name").val());
+}
+
+// After submit name,enacts timer(s), moves hidden gameboy over, 
+const beginGame = function beginGame(){
+    $logName();
+    removeNamingBox();
+}
+
+// Clicking the first button makes everything above happen
+ $(".submitButton").on("click", beginGame);
 
 
-// User story:
+
+
+
+
+
+
+
+
 
 // Stage 1: 
 
-// Player will see cell-phone shaped box that is styled.
-//     HTML labeled section in body
-//     Styled in CSS
-//     Rounded edges
+
+
+
 
 // Player will click a button on the screen and entering name, and the game will begin. 
 //     Button in HTML with a textbox
