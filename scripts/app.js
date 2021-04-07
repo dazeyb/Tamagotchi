@@ -18,10 +18,12 @@ const beginGame = function beginGame(){
 // Clicking the first button makes everything above happen
  $(".submitButton").on("click", beginGame);
 
-
+/**
+ * This sets up health bar, after set time reduces health, eventually to 0, then pet dies. I need to tie in other functions so they don't keep running. 
+ */
 let hearts = 5;
 
- function healthTimer(thing){
+ function healthDecrease(thing){
      if(hearts <= 5 && hearts > 1){
 
         hearts --;
@@ -36,14 +38,27 @@ let hearts = 5;
         console.log("You're dead mate");
         return;
      }
-    //  clearInterval(healthTimer);
+    
  }
 
- const timerID = setInterval(healthTimer, 1000);
+ const healthTimer = setInterval(healthDecrease, 15000);
+ healthDecrease(healthTimer);
 
- healthTimer(timerID);
 
+/**
+ * As long as hearts > 0, levels up monster. Need to add transform functionality here
+ */
+let level = 0;
+ function levelIncrease(thing){
+   if(hearts > 0){
+   level ++;
+   $(".monster-level").text(`Level: ${level}`);
+    }
+   return;   
+ }
 
+ const levelTimer = setInterval(levelIncrease, 7000);
+ levelIncrease(levelTimer);
 
 
 
