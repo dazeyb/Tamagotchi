@@ -38,17 +38,27 @@ let hearts = 5;
         console.log("You're dead mate");
         return;
      }
-    
  }
 
- const healthTimer = setInterval(healthDecrease, 15000);
+ const healthTimer = setInterval(healthDecrease, 10000);
  healthDecrease(healthTimer);
+
+
+// Adds a heart unless hearts are 5 or 0
+const addHeart = function addHeart(){
+    if(hearts != 0 && hearts < 5){
+    $(".test-section").append('<i class="fas fa-heart"></i>');
+    }
+}
+// Adds a heart, unless the hearts are at 0 or 5
+$(".nuke-button").on("click", addHeart);
 
 
 /**
  * As long as hearts > 0, levels up monster. Need to add transform functionality here
  */
 let level = 0;
+
  function levelIncrease(thing){
    if(hearts > 0){
    level ++;
@@ -59,7 +69,6 @@ let level = 0;
 
  const levelTimer = setInterval(levelIncrease, 7000);
  levelIncrease(levelTimer);
-
 
 
 
