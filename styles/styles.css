@@ -1,4 +1,4 @@
-/*
+
 body {
     background-color: rgb(182, 181, 179);
     display: flex;
@@ -35,12 +35,12 @@ h2 {
 
 
  /* Specify this with a class later */
-/* h2 {
+ h2 {
     z-index: 10;
-} */
+} 
 
 
-/*
+
 .main-body {
     background-color: #197287;
     height: 700px;
@@ -58,7 +58,7 @@ h2 {
 }
 
 
-/* i {
+ i {
     font-size: 40px;
     color: rgb(0, 0, 0);
     z-index: 11;
@@ -72,7 +72,7 @@ h2 {
     position: relative; 
 } */
 
-/*
+
 .screen {
     position: absolute;
     max-width: 100%;
@@ -113,4 +113,3 @@ h2 {
     font-size: 20px;
 }
 
-*/

@@ -1,7 +1,7 @@
 // This removes everything in the beginning, and will eventually add all the new elements
 const removeNamingBox = function removeNamingBox(){
     $(".pre-game").remove();
-    console.log("testing");
+    console.log("Name box removed");
 };
 
 // This prints the inputted name into a place for the monsters name
@@ -41,13 +41,16 @@ let hearts = 5;
  }
 
  const healthTimer = setInterval(healthDecrease, 10000);
- healthDecrease(healthTimer);
+
+
 
 
 // Adds a heart unless hearts are 5 or 0
 const addHeart = function addHeart(){
     if(hearts != 0 && hearts < 5){
-    $(".test-section").append('<i class="fas fa-heart"></i>');
+    hearts ++;
+    $(".heart-section").append('<i class="fas fa-heart"></i>');
+    console.log(hearts);
     }
 }
 // Adds a heart, unless the hearts are at 0 or 5
