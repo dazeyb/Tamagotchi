@@ -50,12 +50,6 @@ h2 {
     z-index: 0;
 }
 
-
-.gamepad-grid {
-    z-index: 1;
-}
-
-
  i {
     font-size: 40px;
     color: rgb(0, 0, 0);
@@ -64,7 +58,6 @@ h2 {
 
 
 .screen {
-    display: flex;
     flex-direction: column;
     position: absolute;
     max-width: 100%;
@@ -84,11 +77,18 @@ h2 {
     flex-direction: row;
     position: absolute;
     margin-top: 450px;
-
-
+    margin-left: 12%;
 }
 
+.sleep-section {
+    flex-direction: row;
+    font-size: 12px;
+}
 
+button {
+
+    
+}
 button:hover {
     cursor: pointer;
 }
@@ -101,22 +101,19 @@ button:hover {
 }
 
 .egg-img {
-    transform: scale(7);
-    align-items: center;
+    transform: scale(6);
     max-width: 300px;
     max-height: 300px;
+    position:absolute;
+    margin-left: 180px;
+    margin-top: 80px;
 }
 
 .monster-img {
-    transition: ;
     transform: scale(0.5);
     align-items: center;
     max-width: 300px;
     max-height: 300px;
-}
-
-.sleeping {
-    font-size: 13px;
 }
 
 .fa-heart {
@@ -129,7 +126,6 @@ button:hover {
     font-size: 21px;
 }
 
-.fa-bed {
-    color: royalblue;
-    font-size: 29px;
+.gg-comment {
+    font-size: 35px;
 }
