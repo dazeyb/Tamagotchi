@@ -29,16 +29,11 @@ body {
     text-align: center;
 }
 
+ /* Choose the name text */
 h2 {
     color:rgb(182, 181, 179);
-}
-
-
- /* Specify this with a class later */
- h2 {
     z-index: 10;
-} 
-
+}
 
 
 .main-body {
@@ -83,17 +78,15 @@ h2 {
     border-radius: 5px;
     border: 3px solid rgb(0, 0, 0);
     padding: 27px;
-    z-index: 3;
 }
 
-.healthbar {
+/* .healthbar {
     
     font-size: 27px;
     color: #c44536;
-}
+} */
 
 .div-monster-img {
-    display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%;
@@ -106,10 +99,11 @@ h2 {
     max-height: 100%;
 }
 
-#testing {
-    align-items: center;
-    max-width: 100%;
-    max-height: 100%;
-    font-size: 20px;
+.fa-heart {
+    color: rgb(151, 4, 4);
+}
+
+.fa-bed {
+    color: royalblue;
 }
 

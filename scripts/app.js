@@ -35,13 +35,12 @@ let hearts = 5;
         $(".fa-heart").eq(0).remove();
         hearts --;
         console.log(hearts);
-        console.log("You're dead mate");
+        console.log("Your monster has perished");
         return;
      }
  }
 
  const healthTimer = setInterval(healthDecrease, 10000);
-
 
 
 
@@ -72,6 +71,83 @@ let level = 0;
 
  const levelTimer = setInterval(levelIncrease, 7000);
  levelIncrease(levelTimer);
+
+
+// -------------------------------------------------------------------------------------
+
+ let sleep = 5;
+
+ function sleepDecrease(thing){
+     if(sleep <= 5 && sleep > 1 && hearts > 0){
+
+        sleep --;
+        $(".fa-bed").eq(0).remove();
+        console.log(sleep);
+        console.log("-1 sleep");
+     
+    } else if(sleep == 1 && hearts > 0){
+        $(".fa-bed").eq(0).remove();
+        sleep --;
+        console.log(sleep);
+        console.log("Your monster has fainted from exhaustion");
+        return;
+     }
+ }
+
+ const sleepTimer = setInterval(sleepDecrease, 15000);
+
+
+
+// Adds a sleep unless sleep is at 5 or 0
+const addSleep = function addSleep(){
+    if(sleep != 0 && sleep < 5){
+    sleep ++;
+    $(".sleep-section").append('<i class="fas fa-bed"></i>');
+    console.log(sleep);
+    }
+}
+// Adds sleep, unless sleep is at 0 or 5
+$(".sleep-button").on("click", addSleep);
+
+
+//-----------------------------------------------------------------
+/**
+ * Social Functions
+ */
+
+ let social = 5;
+
+ function sleepDecrease(thing){
+     if(social <= 5 && social > 1 && hearts > 0){
+
+        social --;
+        $(".fa-bed").eq(0).remove();
+        console.log(sleep);
+        console.log("-1 sleep");
+     
+    } else if(social == 1 && hearts > 0){
+        $(".fa-bed").eq(0).remove();
+        social --;
+        console.log(social);
+        console.log("Your monster has perished of loneliness");
+        return;
+     }
+ }
+
+ const socialTimer = setInterval(socialDecrease, 15000);
+
+
+
+// Adds a sleep unless sleep is at 5 or 0
+const addSocial = function addSleep(){
+    if(social != 0 && social < 5){
+    social ++;
+    $(".sleep-section").append('<i class="fas fa-bed"></i>');
+    console.log(sleep);
+    }
+}
+// Adds sleep, unless sleep is at 0 or 5
+$(".sleep-button").on("click", addSleep);
 
 
 
