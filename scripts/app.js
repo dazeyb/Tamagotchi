@@ -62,9 +62,9 @@ $(".nuke-button").on("click", addHeart);
 let level = 0;
 
  function levelIncrease(thing){
-   if(level = 2 && hearts >0){
-    $(".monster-img").fadeOut(2000);
-    $(".monster-img").attr(:src",)
+   if(level === 4 && hearts > 0){
+    $(".monster-img").fadeOut(6000);
+    $(".monster-img").attr("src", "./assets/godzilla.png");
 
    }
    
@@ -76,6 +76,7 @@ let level = 0;
  }
 
  const levelTimer = setInterval(levelIncrease, 7000);
+
  levelIncrease(levelTimer);
 
 
