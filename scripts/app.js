@@ -62,7 +62,12 @@ $(".nuke-button").on("click", addHeart);
 let level = 0;
 
  function levelIncrease(thing){
-   if(hearts > 0){
+   if(level = 10){
+
+   }
+   
+
+   else if(hearts > 0){
    level ++;
    $(".monster-level").text(`Level: ${level}`);
     }
@@ -78,14 +83,14 @@ let level = 0;
  let sleep = 5;
 
  function sleepDecrease(thing){
-     if(sleep <= 5 && sleep > 1 && hearts > 0){
+     if(sleep <= 5 && sleep > 1){
 
         sleep --;
         $(".fa-bed").eq(0).remove();
         console.log(sleep);
         console.log("-1 sleep");
      
-    } else if(sleep == 1 && hearts > 0){
+    } else if(sleep === 1){
         $(".fa-bed").eq(0).remove();
         sleep --;
         console.log(sleep);
@@ -117,16 +122,16 @@ $(".sleep-button").on("click", addSleep);
 
  let social = 5;
 
- function sleepDecrease(thing){
+ function socialDecrease(thing){
      if(social <= 5 && social > 1 && hearts > 0){
 
         social --;
-        $(".fa-bed").eq(0).remove();
-        console.log(sleep);
+        $(".fa-user-friends").eq(0).remove();
+        console.log(social);
         console.log("-1 sleep");
      
-    } else if(social == 1 && hearts > 0){
-        $(".fa-bed").eq(0).remove();
+    } else if(social === 1 && hearts > 0){
+        $(".fa-user-friends").eq(0).remove();
         social --;
         console.log(social);
         console.log("Your monster has perished of loneliness");
@@ -134,20 +139,20 @@ $(".sleep-button").on("click", addSleep);
      }
  }
 
- const socialTimer = setInterval(socialDecrease, 15000);
+ const socialTimer = setInterval(socialDecrease, 5000);
 
 
 
 // Adds a sleep unless sleep is at 5 or 0
-const addSocial = function addSleep(){
+const addSocial = function addSocial(){
     if(social != 0 && social < 5){
     social ++;
-    $(".sleep-section").append('<i class="fas fa-bed"></i>');
-    console.log(sleep);
+    $(".social-section").append('<i class="fas fa-user-friends"></i>');
+    console.log(social);
     }
 }
 // Adds sleep, unless sleep is at 0 or 5
-$(".sleep-button").on("click", addSleep);
+$(".social-button").on("click", addSocial);
 
 
 
@@ -246,3 +251,5 @@ $(".sleep-button").on("click", addSleep);
 // You pet should die if Hunger, Boredom, or Sleepiness hits 1
 // Morph your pet at certain ages: Egg, Godzilla, Mechagodzilla
 // Animate your pet across the screen while it's alive.
+
+
