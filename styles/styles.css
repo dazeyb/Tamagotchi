@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Press Start 2P', cursive;
-    background-color: rgb(182, 181, 179);
+    background-color: rgb(255, 219, 146);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +44,7 @@ h2 {
     height: 700px;
     width: 450px;
     border-radius: 14px 14px 110px 14px;
-    border: 7px outset #283d3b;
+    border: 7px outset #7c8382;
     padding: 20px;
     display: flex;
     z-index: 0;
@@ -55,6 +55,10 @@ h2 {
     color: rgb(0, 0, 0);
     z-index: 11;
 } 
+
+.test {
+    display: flex;
+}
 
 
 .screen {
@@ -71,7 +75,6 @@ h2 {
     z-index: 3;
 }
 
-
 .controller {
     display: flex-inline;
     flex-direction: row;
@@ -81,24 +84,43 @@ h2 {
 }
 
 .sleep-section {
-    flex-direction: row;
+    flex-wrap: wrap;
     font-size: 12px;
 }
 
 button {
-
-    
+    border: rgb(70, 69, 69);
+    border-radius: 10px;
+    padding: 10px;
+    border-style: double;
 }
+
 button:hover {
     cursor: pointer;
 }
 
-.div-monster-img {
+.social-button {
+    background-color:rgb(137, 202, 135);
+}
+
+.sleep-button {
+    background-color:rgb(175, 151, 73);
+}
+
+.nuke-button {
+    background-color:rgb(192, 89, 58);
+}
+
+.music-button {
+    background-color:rgb(153, 169, 184);
+}
+
+/* .div-monster-img {
     justify-content: center;
     align-items: center;
     max-width: 100%;
     max-height: 100%;
-}
+} */
 
 .egg-img {
     transform: scale(6);
@@ -122,10 +144,10 @@ button:hover {
 }
 
 .fa-user-friends {
-    color: rgb(184, 184, 1);
+    color: rgb(202, 171, 84);
     font-size: 21px;
 }
 
 .gg-comment {
-    font-size: 35px;
+    font-size: 25px;
 }

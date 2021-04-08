@@ -40,7 +40,7 @@ let hearts = 5;
      }
  }
 
- const healthTimer = setInterval(healthDecrease, 10000);
+const healthTimer = setInterval(healthDecrease, 10000);
 
 
 
@@ -156,11 +156,8 @@ $(".sleep-button").on("click", function(){
      }
  }
 
- const socialTimer = setInterval(socialDecrease, 5000);
+const socialTimer = setInterval(socialDecrease, 5000);
 
-
-
-// Adds social icon unless at 5 or 0
 const addSocial = function addSocial(){
     if(social != 0 && social < 5){
     social ++;
@@ -168,7 +165,8 @@ const addSocial = function addSocial(){
     console.log(social);
     }
 }
-// Adds sleep, unless sleep is at 0 or 5
+
+// Adds social icon unless at 5 or 0
 $(".social-button").on("click", addSocial);
 
 
