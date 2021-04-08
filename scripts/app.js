@@ -9,18 +9,16 @@ const $logName = function $logName() {
     $(".monster-name").text($(".grab-monster-name").val());
 }
 
-// After submit name,enacts timer(s), moves hidden gameboy over, 
-const beginGame = function beginGame(){
-    $logName();
-    removeNamingBox();
-}
 
-// Clicking the first button makes everything above happen
- $(".submitButton").on("click", beginGame);
 
 /**
  * This sets up health bar, after set time reduces health, eventually to 0, then pet dies. I need to tie in other functions so they don't keep running. 
  */
+
+// After submit name,enacts timer(s), moves hidden gameboy over, 
+const beginGame = function beginGame(){
+    $logName();
+    removeNamingBox();
 let hearts = 5;
 
  function healthDecrease(thing){
@@ -173,15 +171,9 @@ const addSocial = function addSocial(){
 
 // Adds social icon unless at 5 or 0
 $(".social-button").on("click", addSocial);
+}
 
-
-
-$(".music-button").on("click", function(){
-    $(".monster-img").animate({
-        left: '250px',
-        height: '+=150px',
-        width: '+=150px'
-    }); 
-});
+// Clicking the first button makes everything above happen
+$(".submitButton").on("click", beginGame);
 
 
