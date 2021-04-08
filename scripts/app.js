@@ -86,12 +86,12 @@ let level = 0;
      if(sleep <= 5 && sleep > 1){
 
         sleep --;
-        $(".fa-bed").eq(0).remove();
+        $(".sleeping").eq(0).remove();
         console.log(sleep);
         console.log("-1 sleep");
      
     } else if(sleep === 1){
-        $(".fa-bed").eq(0).remove();
+        $(".sleeping").eq(0).remove();
         sleep --;
         console.log(sleep);
         console.log("Your monster has fainted from exhaustion");
@@ -99,25 +99,34 @@ let level = 0;
      }
  }
 
- 
- const sleepTimer = setInterval(sleepDecrease, 15000);
+const sleepTimer = setInterval(sleepDecrease, 5000);
 
 
 
-// Adds a sleep unless sleep is at 5 or 0
 let light = true;
 
-const toggleLight = function addSleep(){
-    if(sleep != 0 && sleep < 5){
-    sleep ++;
-    $(".sleep-section").append('<i class="fas fa-bed"></i>');
-    console.log(sleep);
+const addSleep = function addSleep(){
+    if(light === false) {
+    $(".screen").css("background-color", "#47476b");
+
+        if(sleep != 0 && sleep < 5){
+        sleep ++;
+        $(".sleep-section").append('<div class="sleeping">zzZ</div>');
+        console.log(sleep);
+        }
     }
+
+        else {
+        $(".screen").css("background-color", "#edddd4");
+        }
 }
 
+const lightsOffTimer = setInterval(addSleep, 2000);
 
-// Adds sleep, unless sleep is at 0 or 5
-$(".sleep-button").on("click", toggleLight);
+// Toggles light
+$(".sleep-button").on("click", function(){
+    light = !light;
+});
 
 
 //-----------------------------------------------------------------
@@ -133,7 +142,7 @@ $(".sleep-button").on("click", toggleLight);
         social --;
         $(".fa-user-friends").eq(0).remove();
         console.log(social);
-        console.log("-1 sleep");
+        console.log("-1 social");
      
     } else if(social === 1 && hearts > 0){
         $(".fa-user-friends").eq(0).remove();
@@ -165,21 +174,6 @@ $(".social-button").on("click", addSocial);
 
 
 // Player will click a button on the screen and entering name, and the game will begin. 
-//     Button in HTML with a textbox
-//     Event listener on click, returns a value/creates div with class as name, and text as name
-    
-// An egg will appear on the screen, one life bar, one button for radiation.
-// Changes opacity of egg to 100% on click
-// Creates life bar, or changes opacity and begins countdown
-// and life bar
-// Creates age class, value 0
-
-// A timer will start for age, and one will start for health bar.
-// Hmmmm
-
-// Health bar will decrease over time (bars sliding left? JQuery effects)
-// If health bar = 0, end game and say "Name has died"
-//     variable that keeps count 
 
 
 // Clicking nuke button will increase health value
