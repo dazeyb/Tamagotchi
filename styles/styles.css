@@ -1,5 +1,6 @@
 
 body {
+    font-family: 'Press Start 2P', cursive;
     background-color: rgb(182, 181, 179);
     display: flex;
     justify-content: center;
@@ -23,9 +24,10 @@ body {
 }
 
 .name-box-content {
+    position:absolute;
     justify-content: center;
     align-items: center;
-    font-size: 35px;
+    font-size: 25px;
     text-align: center;
 }
 
@@ -37,6 +39,7 @@ h2 {
 
 
 .main-body {
+
     background-color: #197287;
     height: 700px;
     width: 450px;
@@ -59,15 +62,6 @@ h2 {
     z-index: 11;
 } 
 
- .monster-img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    position: relative; 
-    image-rendering: pixelated;
-} 
-
 
 .screen {
     display: flex;
@@ -86,15 +80,14 @@ h2 {
 
 
 .controller {
-    display: flex;
-    flex-direction: column;
+    display: flex-inline;
+    flex-direction: row;
+    position: absolute;
+    margin-top: 450px;
+
+
 }
 
-button {
-    image-rendering: pixelated;
-    position: absolute;
-    display: inline-flex;
-}
 
 button:hover {
     cursor: pointer;
@@ -107,25 +100,33 @@ button:hover {
     max-height: 100%;
 }
 
-.monster-img {
+.egg-img {
     transform: scale(7);
     align-items: center;
     max-width: 300px;
     max-height: 300px;
 }
 
+.monster-img {
+    transition: ;
+    transform: scale(0.5);
+    align-items: center;
+    max-width: 300px;
+    max-height: 300px;
+}
+
 .sleeping {
-    font-size: 21px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 13px;
 }
 
 .fa-heart {
     color: rgb(151, 4, 4);
+    font-size: 26px;
 }
 
 .fa-user-friends {
     color: rgb(184, 184, 1);
-    font-size: 29px;
+    font-size: 21px;
 }
 
 .fa-bed {

@@ -7,20 +7,21 @@
 
 
     <!-- All of my pages are tested and linked -->
-    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href='https://css.gg/css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="./scripts/app.js" defer></script>
     
-    <title>Tamagotchi</title>
+    <title>Zillagotchi</title>
+
 </head>
 <body>
 
-    <section class="preGame">
+    <!-- <section class="preGame">
      
-    <!-- Input box in here, with a button that will log the click value(event listener) -->
         <namingBox class="name-box pre-game">    
 
             <div class="name-box-content">
@@ -30,12 +31,10 @@
             </div>
 
         </namingBox>
-    
-    </section>
+       
+    </section> -->
 
     
-
-    <!-- Animate in this whole section on button click -->
     <section class="main-body">
 
 
@@ -51,6 +50,15 @@
                     <i class="fas fa-heart"></i>
                 </div>
 
+                
+                <div class="sleep-section">
+                    <div class="sleeping">zzZ</div>
+                    <div class="sleeping">zzZ</div>
+                    <div class="sleeping">zzZ</div>
+                    <div class="sleeping">zzZ</div>
+                    <div class="sleeping">zzZ</div>            
+                </div>
+                
                 <div class="social-section">
                     <i class="fas fa-user-friends"></i>
                     <i class="fas fa-user-friends"></i>
@@ -59,16 +67,8 @@
                     <i class="fas fa-user-friends"></i>     
                 </div>
 
-                <div class="sleep-section">
-                    <div class="sleeping">zzZ</div>
-                    <div class="sleeping">zzZ</div>
-                    <div class="sleeping">zzZ</div>
-                    <div class="sleeping">zzZ</div>
-                    <div class="sleeping">zzZ</div>            
-                </div>
-
                 <div class="div-monster-img">
-                    <img class="monster-img" src="./assets/egg.png">
+                    <img class="egg-img" src="./assets/egg.png">
                 </div>
 
 
@@ -89,6 +89,9 @@
         </div>
              
     </section>
+
+
+    <img class='monster-img' src='./assets/godzilla.png' style="display: none;">
   
     
 </body>

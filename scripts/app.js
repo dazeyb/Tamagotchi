@@ -62,10 +62,11 @@ $(".nuke-button").on("click", addHeart);
 let level = 0;
 
  function levelIncrease(thing){
-   if(level === 4 && hearts > 0){
-    $(".monster-img").fadeOut(6000);
-    $(".monster-img").attr("src", "./assets/godzilla.png");
+   if(level === 1 && hearts > 0){
+    level ++;
 
+    $(".egg-img").fadeOut(1100);
+    $(".monster-img").appendTo(".div-monster-img").show('slow');
    }
    
    else if(hearts > 0){
@@ -139,7 +140,7 @@ $(".sleep-button").on("click", function(){
  let social = 5;
 
  function socialDecrease(thing){
-     if(social <= 5 && social > 1 && hearts > 0){
+     if(social <= 5 && social > 1){
 
         social --;
         $(".fa-user-friends").eq(0).remove();
@@ -159,9 +160,9 @@ $(".sleep-button").on("click", function(){
 
 
 
-// Adds a sleep unless sleep is at 5 or 0
+// Adds social icon unless at 5 or 0
 const addSocial = function addSocial(){
-    if(social != 0 && social < 5){h
+    if(social != 0 && social < 5){
     social ++;
     $(".social-section").append('<i class="fas fa-user-friends"></i>');
     console.log(social);
