@@ -62,11 +62,12 @@ $(".nuke-button").on("click", addHeart);
 let level = 0;
 
  function levelIncrease(thing){
-   if(level = 10){
+   if(level = 2 && hearts >0){
+    $(".monster-img").fadeOut(2000);
+    $(".monster-img").attr(:src",)
 
    }
    
-
    else if(hearts > 0){
    level ++;
    $(".monster-level").text(`Level: ${level}`);
