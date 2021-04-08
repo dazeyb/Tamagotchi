@@ -145,7 +145,7 @@ $(".sleep-button").on("click", addSleep);
 
 // Adds a sleep unless sleep is at 5 or 0
 const addSocial = function addSocial(){
-    if(social != 0 && social < 5){
+    if(social != 0 && social < 5){h
     social ++;
     $(".social-section").append('<i class="fas fa-user-friends"></i>');
     console.log(social);
