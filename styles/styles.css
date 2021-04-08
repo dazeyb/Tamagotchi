@@ -31,6 +31,29 @@ body {
     text-align: center;
 }
 
+.death {
+    padding: 60px;
+    margin: 20px 20px;
+    width:400px;
+    height:150px;
+    background:rgb(88, 90, 84);
+    position: absolute;
+    z-index: 10;
+    border-radius: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.death-msg {
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+    font-color: rgb(151, 47, 47);
+}
+
  /* Choose the name text */
 h2 {
     color:rgb(182, 181, 179);

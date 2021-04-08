@@ -35,7 +35,10 @@ let hearts = 5;
         $(".fa-heart").eq(0).remove();
         hearts --;
         console.log(hearts);
-        console.log("Your monster has perished");
+
+        $(".death").text("Your monster has perished");
+        $(".death").css("display", "block");
+
         return;
      }
  }
@@ -65,7 +68,7 @@ let level = 0;
    if(level === 1 && hearts > 0){
     level ++;
 
-    $(".egg-img").fadeOut(1100);
+    $(".egg-img").fadeOut(900);
     $(".monster-img").appendTo(".div-monster-img").show('slow');
    }
    
@@ -97,7 +100,8 @@ let level = 0;
         $(".sleeping").eq(0).remove();
         sleep --;
         console.log(sleep);
-        console.log("Your monster has fainted from exhaustion");
+        $(".death").text("Your monster has fainted from exhaustion");
+        $(".death").css("display", "block");
         return;
      }
  }
@@ -151,7 +155,8 @@ $(".sleep-button").on("click", function(){
         $(".fa-user-friends").eq(0).remove();
         social --;
         console.log(social);
-        console.log("Your monster has perished of loneliness");
+        $(".death").text("Your monster has perished of loneliness");
+        $(".death").css("display", "block");
         return;
      }
  }

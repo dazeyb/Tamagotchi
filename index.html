@@ -20,7 +20,7 @@
 </head>
 <body>
 
-    <!-- <section class="preGame">
+    <section class="preGame">
      
         <namingBox class="name-box pre-game">    
 
@@ -32,7 +32,12 @@
 
         </namingBox>
        
-    </section> -->
+    </section>
+
+    
+    <section class="death" style="display: none;">
+        <h2 class="death-msg"></h2>   
+    </section>
 
     
     <section class="main-body">
@@ -41,6 +46,9 @@
         <div class="gamepad-grid">
             
             <screen class="screen">
+
+                <div class="monster-name"></div>
+                <div class="monster-level">Level: 0</div>
 
                 <div class="heart-section">
                     <i class="fas fa-heart"></i>
@@ -72,10 +80,6 @@
                     <img class="egg-img" src="./assets/egg.png">
                     <img class='monster-img' src='./assets/godzilla.png' style="display: none;">
                 </div>
-
-
-                <div class="monster-name"></div>
-                <div class="monster-level">Level: 0</div>
 
             </screen>
         
