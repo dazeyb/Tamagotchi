@@ -99,20 +99,25 @@ let level = 0;
      }
  }
 
+ 
  const sleepTimer = setInterval(sleepDecrease, 15000);
 
 
 
 // Adds a sleep unless sleep is at 5 or 0
-const addSleep = function addSleep(){
+let light = true;
+
+const toggleLight = function addSleep(){
     if(sleep != 0 && sleep < 5){
     sleep ++;
     $(".sleep-section").append('<i class="fas fa-bed"></i>');
     console.log(sleep);
     }
 }
+
+
 // Adds sleep, unless sleep is at 0 or 5
-$(".sleep-button").on("click", addSleep);
+$(".sleep-button").on("click", toggleLight);
 
 
 //-----------------------------------------------------------------
