@@ -26,10 +26,10 @@ body {
 
 .name-box {
     padding: 35px;
-    margin: 20px 20px 60px 20px;
+    margin: 0 20px 80px 20px;
     width:400px;
     height:150px;
-    background:rgb(112, 112, 112);
+    background:rgb(87, 87, 87);
     position: absolute;
     z-index: 10;
     border-radius: 150px;
@@ -59,7 +59,7 @@ h2 {
     margin: 20px 20px;
     width:400px;
     height:150px;
-    background:rgb(151, 138, 122);
+    background:rgb(39, 39, 39);
     position: absolute;
     z-index: 10;
     border-radius: 200px;
@@ -67,7 +67,7 @@ h2 {
     align-items: center;
     display: flex;
     font-size: 30px;
-    color:rgb(146, 50, 50);
+    color:rgb(216, 103, 103);
 }
 
 .death-msg {
@@ -123,9 +123,9 @@ h2 {
     }
 
 button {
-    border: rgb(70, 69, 69);
+    border: rgb(32, 83, 112);
     padding: 14px;
-    border-style: double;
+    border-style: outset;
 }
 
 button:hover {
@@ -242,4 +242,19 @@ button:hover {
     .fa-skull {
         color: rgb(0, 0, 0);
         font-size: 10px;
+    }
+
+    .speaker {
+        text-align-last: right;
+        margin: 300px 0 0 260px;
+        font-size: large;
+        z-index: 11;
+    }
+
+
+    .fa-ellipsis-v {
+        font-size: 50px;
+        color: rgb(36, 36, 36);
+        z-index: 11;
+        margin: 300px 0 0 0;
     }

@@ -97,7 +97,7 @@ $(".nuke-button").on("click", addHeart);
     }
 }
 
- const levelTimer = setInterval(levelIncrease, 1000);
+ const levelTimer = setInterval(levelIncrease, 4000);
 
  levelIncrease(levelTimer);
 
@@ -128,7 +128,7 @@ $(".nuke-button").on("click", addHeart);
      }
 }
 
-const sleepTimer = setInterval(sleepDecrease, 5000);
+const sleepTimer = setInterval(sleepDecrease, 7200);
 
 /** Lights Off
  *  If lights are off, heals exhaustion over time
@@ -148,7 +148,7 @@ const addSleep = function addSleep(){
         }
 }
 
-const lightsOffTimer = setInterval(addSleep, 1500);
+const lightsOffTimer = setInterval(addSleep, 2500);
 
 // Toggles light
 $(".sleep-button").on("click", function(){
@@ -181,7 +181,7 @@ $(".sleep-button").on("click", function(){
      }
  }
 
-const socialTimer = setInterval(socialDecrease, 5000);
+const socialTimer = setInterval(socialDecrease, 3700);
 
 
 const addSocial = function addSocial(){
