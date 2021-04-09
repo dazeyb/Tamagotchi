@@ -50,3 +50,10 @@ Button to play music for monster so they dance.
 Stage 2: 
 
 If enough time passes, monster will break out of egg.
+
+
+![gameboyimg](./assets/Wireframe.jfif)
+![codesnippetbounce](./assets/Codesnippetsstart.png)
+![codesnippetbounce](./assets/Codesnippetssocial.png)
+![codesnippetbounce](./assets/Codesnippetsbounce.png)
+![codesnippetbounce](./assets/Codesnippetslightsoff.png)
