@@ -19,7 +19,8 @@ const $logName = function $logName() {
 const beginGame = function beginGame(){
     $logName();
     removeNamingBox();
-let hearts = 5;
+
+    let hearts = 5;
 
  function healthDecrease(thing){
      if(hearts <= 5 && hearts > 1){
@@ -63,7 +64,7 @@ $(".nuke-button").on("click", addHeart);
 let level = 0;
 
  function levelIncrease(thing){
-   if(level === 1 && hearts > 0){
+   if(level === 5 && hearts > 0){
     level ++;
 
     $(".egg-img").fadeOut(900);
