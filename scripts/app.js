@@ -9,6 +9,7 @@ const $logName = function $logName() {
     $(".monster-name").text($(".grab-monster-name").val());
 }
 
+//Couldn't put this into the death function, timers interrupting action
 const blackbkg = function (){
     $(".screen").css("background-color", "#2f2e2e");
 };
@@ -16,7 +17,6 @@ const blackbkg = function (){
 const death = function death(){
     //$(".screen").css("background-color", "#2f2e2e");
     $(".dead").remove();
-   
     setTimeout(blackbkg, 100);
     setTimeout(blackbkg, 800);
     setTimeout(blackbkg, 1600);
@@ -25,7 +25,7 @@ const death = function death(){
 }
 
 
-// After submit name,enacts timer(s)
+// After submits name and runs all timers
 const beginGame = function beginGame(){
     $logName();
     removeNamingBox();
@@ -44,15 +44,12 @@ let light = true;
     else if(hearts <= 5 && hearts > 1){
         hearts --;
         $(".fa-heart").eq(0).remove();
-        console.log(hearts);
-        console.log("-1 heart");
      
     } else if(hearts == 1){
         $(".fa-heart").eq(0).remove();
         hearts --;
-        console.log(hearts);
 
-        $(".death").text("Your monster has perished");
+        $(".death").text("Your monster has perished ");
         $(".death").css("display", "block");
         death();
         clearInterval(healthTimer);
@@ -68,15 +65,14 @@ const addHeart = function addHeart(){
     if(hearts != 0 && hearts < 5){
     hearts ++;
     $(".heart-section").append('<i class="fas fa-heart"></i>');
-    console.log(hearts);
     }
 }
 // Adds a heart, unless the hearts are at 0 or 5
 $(".nuke-button").on("click", addHeart);
 
 
-/**
- * As long as hearts > 0, levels up monster. Need to add transform functionality here
+/** Leveling
+ * As long as hearts > 0, levels up monster
  */
 
  function levelIncrease(thing){
@@ -108,6 +104,10 @@ $(".nuke-button").on("click", addHeart);
 
 // -------------------------------------------------------------------------------------
 
+/** Sleep functions
+ * If not dead, increases exhaustion
+ */
+
  function sleepDecrease(thing){
     if(hearts === 0 || social === 0){
         clearInterval(sleepTimer);
@@ -117,13 +117,10 @@ $(".nuke-button").on("click", addHeart);
 
         sleep --;
         $(".sleeping").eq(0).remove();
-        console.log(sleep);
-        console.log("-1 sleep");
      
     } else if(sleep === 1){
         $(".sleeping").eq(0).remove();
         sleep --;
-        console.log(sleep);
         $(".death").text("Your monster has fainted from exhaustion");
         $(".death").css("display", "block");
         death();
@@ -133,6 +130,10 @@ $(".nuke-button").on("click", addHeart);
 
 const sleepTimer = setInterval(sleepDecrease, 5000);
 
+/** Lights Off
+ *  If lights are off, heals exhaustion over time
+ */
+
 const addSleep = function addSleep(){
     if(light === false) {
     $(".screen").css("background-color", "#47476b");
@@ -140,7 +141,6 @@ const addSleep = function addSleep(){
         if(sleep != 0 && sleep < 5){
         sleep ++;
         $(".sleep-section").append('<div class="sleeping">zzZ</div>');
-        console.log(sleep);
         }
     }
         else {
@@ -157,8 +157,8 @@ $(".sleep-button").on("click", function(){
 
 
 //-----------------------------------------------------------------
-/**
- * Social Functions
+/** Social Functions
+ * If not dead, increases loneliness by decreasing social icons over time
  */
 
  function socialDecrease(thing){
@@ -170,13 +170,10 @@ $(".sleep-button").on("click", function(){
 
         social --;
         $(".fa-user-friends").eq(0).remove();
-        console.log(social);
-        console.log("-1 social");
      
     } else if(social === 1 && hearts > 0){
         $(".fa-user-friends").eq(0).remove();
         social --;
-        console.log(social);
         $(".death").text("Your monster has perished of loneliness");
         $(".death").css("display", "block");
         death();
@@ -186,11 +183,11 @@ $(".sleep-button").on("click", function(){
 
 const socialTimer = setInterval(socialDecrease, 5000);
 
+
 const addSocial = function addSocial(){
     if(social != 0 && social < 5){
     social ++;
     $(".social-section").append('<i class="fas fa-user-friends"></i>');
-    console.log(social);
     }
 }
 
@@ -201,10 +198,24 @@ $(".social-button").on("click", addSocial);
 
 //------------------------------------------------------------------------------
 
+let bounce = true;
+
+let noBounce = function noBounce(){
+    let bounce = !bounce;
+    $(".monster-img").removeClass("bounce-2");
+}
 
 const $addBounce = function $addBounce (){
+    if(bounce = true){
     $(".monster-img").addClass("bounce-2");
+    bounce = !bounce;
+    }
+    else{
+    $(".monster-img").removeClass("bounce-2");
+    bounce = !bounce;
+    }
 }
+
 //event listener add pre made function to add class
 
 $(".music-button").on("click", $addBounce);

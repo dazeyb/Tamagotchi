@@ -59,7 +59,7 @@ h2 {
     margin: 20px 20px;
     width:400px;
     height:150px;
-    background:rgb(88, 90, 84);
+    background:rgb(151, 138, 122);
     position: absolute;
     z-index: 10;
     border-radius: 200px;
@@ -67,6 +67,7 @@ h2 {
     align-items: center;
     display: flex;
     font-size: 30px;
+    color:rgb(146, 50, 50);
 }
 
 .death-msg {
@@ -90,10 +91,10 @@ h2 {
     max-width: 100%;
     max-height: 100%;
     background-color: #edddd4;
-    height: 300px;
+    height: 315px;
     width: 385px;
     border-radius: 5px;
-    border: 3px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     padding: 27px;
     z-index: 3;
 }
@@ -106,25 +107,24 @@ h2 {
 }
 
     .monster-name {
-        margin: 0 0 4px 0;
-        font-size: 31px;
+        margin: 0 0 2px 0;
+        font-size: 25px;
     }
 
     .sleep-section {
         display: flex;
         font-size: 13px;
-        margin: 4px 0;
+        margin: 2px 0;
         color: rgb(46, 129, 177);
     }
 
     .heart-section {
-        margin-top: 3px;
+        margin-top: 2px;
     }
 
 button {
     border: rgb(70, 69, 69);
-    border-radius: 10px;
-    padding: 10px;
+    padding: 14px;
     border-style: double;
 }
 
@@ -136,6 +136,7 @@ button:hover {
 
         .social-button {
             background-color:rgb(137, 202, 135);
+            border-radius: 50px;
         }
 
         .sleep-button {
@@ -145,10 +146,12 @@ button:hover {
 
         .nuke-button {
             background-color:rgb(192, 89, 58);
+            border-radius: 90px 0 0 90px;
         }
 
         .music-button {
             background-color:rgb(153, 169, 184);
+            border-radius: 0 90px 90px 0;
             margin: 0 15px;
         }
 
@@ -169,6 +172,7 @@ button:hover {
     margin-top: 80px;
 } */
 
+
 .egg-img {
     align-self: flex-end;
         animation-duration: 2s;
@@ -180,6 +184,8 @@ button:hover {
         width: 200px;
 }
 
+/* Tips & tricks for bouncing from https://css-tricks.com/making-css-animations-feel-natural/ */
+
 .bounce {
         animation-name: bounce;
         animation-timing-function: ease-in;
@@ -187,8 +193,8 @@ button:hover {
     @keyframes bounce {
             0%   { transform: scale(1,1)      translateY(-2px); }
             10%  { transform: scale(1.1,.9)   translateY(0); }
-            30%  { transform: scale(.95,1.05)   translateY(0); }
-            50%  { transform: scale(1,1) translateY(0); }
+            30%  { transform: scale(.95,1.05) translateY(0); }
+            50%  { transform: scale(1,1)      translateY(0); }
             57%  { transform: scale(1,1)      translateY(0); }
             64%  { transform: scale(1,1)      translateY(0); }
             100% { transform: scale(1,1)      translateY(0); }
@@ -199,7 +205,7 @@ button:hover {
         animation-duration: 1s;
         animation-iteration-count: 3;
         padding: 40px;
-        margin: 0 0 70px 50px;
+        margin: 0 0 80px 50px;
         height: 170px;
         transform-origin: bottom;
         width: 170px;
@@ -221,7 +227,7 @@ button:hover {
     
     .fa-heart {
         color: rgb(151, 4, 4);
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .fa-user-friends {
@@ -231,4 +237,9 @@ button:hover {
 
     .gg-comment {
         font-size: 25px;
+    }
+
+    .fa-skull {
+        color: rgb(0, 0, 0);
+        font-size: 10px;
     }
