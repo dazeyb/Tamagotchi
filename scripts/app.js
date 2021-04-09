@@ -9,19 +9,23 @@ const $logName = function $logName() {
     $(".monster-name").text($(".grab-monster-name").val());
 }
 
+const blackbkg = function (){
+    $(".screen").css("background-color", "#2f2e2e");
+};
+
 const death = function death(){
     //$(".screen").css("background-color", "#2f2e2e");
     $(".dead").remove();
+   
+    setTimeout(blackbkg, 100);
+    setTimeout(blackbkg, 800);
+    setTimeout(blackbkg, 1600);
+    setTimeout(blackbkg, 2400);
     //$(".div-monster-img").append( and img);
-    
 }
 
 
-/**
- * This sets up health bar, after set time reduces health, eventually to 0, then pet dies. I need to tie in other functions so they don't keep running. 
- */
-
-// After submit name,enacts timer(s), moves hidden gameboy over, 
+// After submit name,enacts timer(s)
 const beginGame = function beginGame(){
     $logName();
     removeNamingBox();
@@ -34,7 +38,7 @@ let light = true;
 
  function healthDecrease(thing){
     if(social === 0 || sleep === 0){
-        return
+        clearInterval(healthTimer);
     }
 
     else if(hearts <= 5 && hearts > 1){
@@ -51,11 +55,11 @@ let light = true;
         $(".death").text("Your monster has perished");
         $(".death").css("display", "block");
         death();
-        return;
+        clearInterval(healthTimer);
      }
  }
 
-const healthTimer = setInterval(healthDecrease, 2000);
+const healthTimer = setInterval(healthDecrease, 5000);
 
 
 
@@ -76,19 +80,26 @@ $(".nuke-button").on("click", addHeart);
  */
 
  function levelIncrease(thing){
-    if(level === 5 && hearts > 0){
+    if(hearts === 0 || social === 0){
+        clearInterval(levelTimer);
+    }
+    
+    else if(sleep === 0){
+        clearInterval(levelTimer);
+    }
+    
+    else if(level === 5 && hearts > 0){
     level ++;
     $(".monster-level").text(`Level: ${level}`);
+    $(".monster-img").appendTo(".div-monster-img").show('fast');
     $(".egg-img").fadeOut(900);
-    $(".monster-img").appendTo(".div-monster-img").show('slow');
    }
    
    else if(hearts > 0){
    level ++;
    $(".monster-level").text(`Level: ${level}`);
     }
-   return;   
- }
+}
 
  const levelTimer = setInterval(levelIncrease, 1000);
 
@@ -99,7 +110,7 @@ $(".nuke-button").on("click", addHeart);
 
  function sleepDecrease(thing){
     if(hearts === 0 || social === 0){
-        return
+        clearInterval(sleepTimer);
     }
 
     else if(sleep <= 5 && sleep > 1){
@@ -116,12 +127,11 @@ $(".nuke-button").on("click", addHeart);
         $(".death").text("Your monster has fainted from exhaustion");
         $(".death").css("display", "block");
         death();
-        return;
+        clearInterval(sleepTimer);
      }
- }
+}
 
-const sleepTimer = setInterval(sleepDecrease, 2000);
-
+const sleepTimer = setInterval(sleepDecrease, 5000);
 
 const addSleep = function addSleep(){
     if(light === false) {
@@ -133,13 +143,12 @@ const addSleep = function addSleep(){
         console.log(sleep);
         }
     }
-
         else {
         $(".screen").css("background-color", "#edddd4");
         }
 }
 
-const lightsOffTimer = setInterval(addSleep, 1000);
+const lightsOffTimer = setInterval(addSleep, 1500);
 
 // Toggles light
 $(".sleep-button").on("click", function(){
@@ -154,7 +163,7 @@ $(".sleep-button").on("click", function(){
 
  function socialDecrease(thing){
     if(hearts === 0 || sleep === 0){
-        return
+        clearInterval(socialTimer);
     }
 
     else if(social <= 5 && social > 1){
@@ -171,11 +180,11 @@ $(".sleep-button").on("click", function(){
         $(".death").text("Your monster has perished of loneliness");
         $(".death").css("display", "block");
         death();
-        return;
+        clearInterval(socialTimer);
      }
  }
 
-const socialTimer = setInterval(socialDecrease, 2000);
+const socialTimer = setInterval(socialDecrease, 5000);
 
 const addSocial = function addSocial(){
     if(social != 0 && social < 5){
@@ -187,14 +196,18 @@ const addSocial = function addSocial(){
 
 // Adds social icon unless at 5 or 0
 $(".social-button").on("click", addSocial);
+
 }
+
 //------------------------------------------------------------------------------
 
-const test = function test(){
-$('.egg-img').show('slide', {direction: 'right'}, 1000);
-}
 
-$(".music-button").on("click", test);
+const $addBounce = function $addBounce (){
+    $(".monster-img").addClass("bounce-2");
+}
+//event listener add pre made function to add class
+
+$(".music-button").on("click", $addBounce);
 
 // Clicking the first button makes everything above happen
 $(".submitButton").on("click", beginGame);
