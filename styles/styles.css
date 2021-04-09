@@ -7,15 +7,32 @@ body {
     align-items: center;
 }
 
+.main-body {
+    justify-content: center;
+    background-color: #197287;
+    height: 700px;
+    width: 450px;
+    border-radius: 14px 14px 110px 14px;
+    border: 7px outset #7c8382;
+    padding: 20px;
+    display: flex;
+    z-index: 0;
+}
+
+.gamepad-grid {
+    display: flex;
+    justify-content: center;
+}
+
 .name-box {
-    padding: 60px;
-    margin: 20px 20px;
+    padding: 35px;
+    margin: 20px 20px 60px 20px;
     width:400px;
     height:150px;
-    background:rgb(88, 90, 84);
+    background:rgb(112, 112, 112);
     position: absolute;
     z-index: 10;
-    border-radius: 200px;
+    border-radius: 150px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -27,6 +44,13 @@ body {
     align-items: center;
     font-size: 25px;
     text-align: center;
+}
+
+h2 {
+    margin: 5px;
+    color:rgb(223, 153, 13);
+    z-index: 10;
+    font-size: 25px;
 }
 
 .death {
@@ -51,22 +75,6 @@ body {
     text-align: center;
 }
 
-h2 {
-    color:rgb(182, 181, 179);
-    z-index: 10;
-}
-
-.main-body {
-
-    background-color: #197287;
-    height: 700px;
-    width: 450px;
-    border-radius: 14px 14px 110px 14px;
-    border: 7px outset #7c8382;
-    padding: 20px;
-    display: flex;
-    z-index: 0;
-}
 
  i {
     font-size: 40px;
@@ -93,8 +101,7 @@ h2 {
     display: flex-inline;
     flex-direction: row;
     position: absolute;
-    margin-top: 450px;
-    margin-left: 12%;
+    margin: 450px 20px 0 20px;
 }
 
     .monster-name {
@@ -144,15 +151,45 @@ button:hover {
             margin: 0 15px;
         }
 
+        .submitButton {
+            background-color: #62ad73;
+            font-family: 'Press Start 2P', cursive;
+        }
 
-.egg-img {
+
+/* .egg-img {
     transform: scale(6);
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
     max-width: 300px;
     max-height: 300px;
     position:absolute;
     margin-left: 180px;
     margin-top: 80px;
+} */
+
+.egg-img {
+    align-self: flex-end;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        padding: 40px;
+        margin: 0 0 70px 50px;
+        height: 200px;
+        transform-origin: bottom;
+        width: 200px;
 }
+
+.bounce {
+        animation-name: bounce;
+        animation-timing-function: linear;
+    }
+    @keyframes bounce {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-100px); }
+        100% { transform: translateY(0); }
+    }
+
+
 
 .monster-img {
     transform: scale(0.5);

@@ -9,6 +9,12 @@ const $logName = function $logName() {
     $(".monster-name").text($(".grab-monster-name").val());
 }
 
+const death = function death(){
+    //$(".screen").css("background-color", "#2f2e2e");
+    $(".dead").remove();
+    //$(".div-monster-img").append( and img);
+    
+}
 
 
 /**
@@ -20,11 +26,18 @@ const beginGame = function beginGame(){
     $logName();
     removeNamingBox();
 
-    let hearts = 5;
+let level = 0;
+let hearts = 5;
+let sleep = 5;
+let social = 5;
+let light = true;
 
  function healthDecrease(thing){
-     if(hearts <= 5 && hearts > 1){
+    if(social === 0 || sleep === 0){
+        return
+    }
 
+    else if(hearts <= 5 && hearts > 1){
         hearts --;
         $(".fa-heart").eq(0).remove();
         console.log(hearts);
@@ -37,12 +50,12 @@ const beginGame = function beginGame(){
 
         $(".death").text("Your monster has perished");
         $(".death").css("display", "block");
-
+        death();
         return;
      }
  }
 
-const healthTimer = setInterval(healthDecrease, 10000);
+const healthTimer = setInterval(healthDecrease, 2000);
 
 
 
@@ -61,12 +74,11 @@ $(".nuke-button").on("click", addHeart);
 /**
  * As long as hearts > 0, levels up monster. Need to add transform functionality here
  */
-let level = 0;
 
  function levelIncrease(thing){
-   if(level === 5 && hearts > 0){
+    if(level === 5 && hearts > 0){
     level ++;
-
+    $(".monster-level").text(`Level: ${level}`);
     $(".egg-img").fadeOut(900);
     $(".monster-img").appendTo(".div-monster-img").show('slow');
    }
@@ -78,17 +90,19 @@ let level = 0;
    return;   
  }
 
- const levelTimer = setInterval(levelIncrease, 7000);
+ const levelTimer = setInterval(levelIncrease, 1000);
 
  levelIncrease(levelTimer);
 
 
 // -------------------------------------------------------------------------------------
 
- let sleep = 5;
-
  function sleepDecrease(thing){
-     if(sleep <= 5 && sleep > 1){
+    if(hearts === 0 || social === 0){
+        return
+    }
+
+    else if(sleep <= 5 && sleep > 1){
 
         sleep --;
         $(".sleeping").eq(0).remove();
@@ -101,15 +115,13 @@ let level = 0;
         console.log(sleep);
         $(".death").text("Your monster has fainted from exhaustion");
         $(".death").css("display", "block");
+        death();
         return;
      }
  }
 
-const sleepTimer = setInterval(sleepDecrease, 5000);
+const sleepTimer = setInterval(sleepDecrease, 2000);
 
-
-
-let light = true;
 
 const addSleep = function addSleep(){
     if(light === false) {
@@ -127,7 +139,7 @@ const addSleep = function addSleep(){
         }
 }
 
-const lightsOffTimer = setInterval(addSleep, 2000);
+const lightsOffTimer = setInterval(addSleep, 1000);
 
 // Toggles light
 $(".sleep-button").on("click", function(){
@@ -140,10 +152,12 @@ $(".sleep-button").on("click", function(){
  * Social Functions
  */
 
- let social = 5;
-
  function socialDecrease(thing){
-     if(social <= 5 && social > 1){
+    if(hearts === 0 || sleep === 0){
+        return
+    }
+
+    else if(social <= 5 && social > 1){
 
         social --;
         $(".fa-user-friends").eq(0).remove();
@@ -156,11 +170,12 @@ $(".sleep-button").on("click", function(){
         console.log(social);
         $(".death").text("Your monster has perished of loneliness");
         $(".death").css("display", "block");
+        death();
         return;
      }
  }
 
-const socialTimer = setInterval(socialDecrease, 5000);
+const socialTimer = setInterval(socialDecrease, 2000);
 
 const addSocial = function addSocial(){
     if(social != 0 && social < 5){
@@ -173,6 +188,13 @@ const addSocial = function addSocial(){
 // Adds social icon unless at 5 or 0
 $(".social-button").on("click", addSocial);
 }
+//------------------------------------------------------------------------------
+
+const test = function test(){
+$('.egg-img').show('slide', {direction: 'right'}, 1000);
+}
+
+$(".music-button").on("click", test);
 
 // Clicking the first button makes everything above happen
 $(".submitButton").on("click", beginGame);
